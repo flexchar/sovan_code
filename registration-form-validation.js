@@ -19,45 +19,28 @@ function formValidation() {
   var s_province = document.registration.province;
   var permis = document.registration.last;
 
-  if (majorselect(majorselection)) {
-    if (valiadateLifeinfo(lifeinfo)) {
-      if (allLetter(username)) {
-        if (validateLatinname(latin)) {
-          if (validateImagefile(imagefile)) {
-            if (validsex(umsex, ufsex)) {
-              if (validateBirth(dateOfbirth)) {
-                if (Validateplacebirth(placebirth)) {
-                  if (validateNationality(mynationality)) {
-                    if (ValidateIDnumber(idNumber)) {
-                      if (ValidateAddress(userAddress)) {
-                        if (phone_validation(usermobile, 8, 15)) {
-                          if (ValidateEmail(uemail)) {
-                            if (validateparentName(userParent)) {
-                              if (validatRelationship(userRelationship)) {
-                                if (validatParentNum(parentNum, 8, 15)) {
-                                  if (validateHighSchool(userHighSchool)) {
-                                    if (validateProvince(s_province)) {
-                                      if (validate_permisstion(permis)) {
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  return false;
+  return (
+    majorselect(majorselection) &&
+    valiadateLifeinfo(lifeinfo) &&
+    allLetter(username) &&
+    validateLatinname(latin) &&
+    validateImagefile(imagefile) &&
+    validsex(umsex, ufsex) &&
+    validateBirth(dateOfbirth) &&
+    Validateplacebirth(placebirth) &&
+    validateNationality(mynationality) &&
+    ValidateIDnumber(idNumber) &&
+    ValidateAddress(userAddress) &&
+    phone_validation(usermobile, 8, 15) &&
+    ValidateEmail(uemail) &&
+    validateparentName(userParent) &&
+    validatRelationship(userRelationship) &&
+    validatParentNum(parentNum, 8, 15) &&
+    validateHighSchool(userHighSchool) &&
+    validateProvince(s_province) &&
+    validate_permisstion(permis)
+  );
+
   //formValidate
 }
 
