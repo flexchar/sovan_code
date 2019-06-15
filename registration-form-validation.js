@@ -50,9 +50,8 @@ function majorselect(majorselection) {
     alert("សូមជ្រើសរើសមុខជំនាញរបស់អ្នក\n Select your major");
     majorselection.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 function valiadateLifeinfo(lifeinfo) {
@@ -63,9 +62,8 @@ function valiadateLifeinfo(lifeinfo) {
     return alert(
       "តើអ្នកស្គាល់សាកលវិទ្យាល័យ ឡាយហ្វតាមរយៈអ្វី?\n How did you come to know about Life University?"
     );
-  } else {
-    return true;
   }
+  return true;
 }
 
 function allLetter(username) {
@@ -75,9 +73,8 @@ function allLetter(username) {
     alert("សូមបំពេញឈ្មោៈរបស់អ្នកជាតួអក្សរ\n(Name must have alphabet only)");
     username.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 //******
 function validateLatinname(latin) {
@@ -101,9 +98,8 @@ function validateImagefile(imagefile) {
     alert("សូមជ្រើសរើសរូបភាពរបស់អ្នក\n(please choose Image file)");
     imagefile.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 //******
 function validsex(umsex, ufsex) {
@@ -143,9 +139,8 @@ function validateBirth(dateOfbirth) {
     );
     dateOfbirth.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 function Validateplacebirth(placebirth) {
@@ -157,9 +152,8 @@ function Validateplacebirth(placebirth) {
     );
     placebirth.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 //*******
 function validateNationality(mynationality) {
@@ -169,9 +163,8 @@ function validateNationality(mynationality) {
     alert("សូមបំពេញ សញ្ជាតិរបស់អ្នក\n(Please Complete your Nationality!)");
     mynationality.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 //*******
 function ValidateIDnumber(idNumber) {
@@ -179,9 +172,8 @@ function ValidateIDnumber(idNumber) {
     alert("សូមបំពេញលេខអត្តសញ្ញាណប័ណ្ណ \n(Please Enter your ID card number)");
     idNumber.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 //*******
 function ValidateAddress(userAddress) {
@@ -191,9 +183,8 @@ function ValidateAddress(userAddress) {
     );
     userAddress.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 //******
@@ -233,9 +224,8 @@ function validateparentName(userParent) {
     );
     userParent.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 //*****
@@ -246,9 +236,8 @@ function validatRelationship(userRelationship) {
     );
     userRelationship.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 //******
 function validatParentNum(parentNum, mx, my) {
@@ -274,9 +263,8 @@ function validateHighSchool(userHighSchool) {
     );
     userHighSchool.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 //******
@@ -285,9 +273,8 @@ function validateProvince(s_province) {
     alert("សូមជ្រើសរើសឈ្មោះខេត្ត \n(Select your province!)");
     s_province.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 function validate_permisstion(permis) {
@@ -297,7 +284,6 @@ function validate_permisstion(permis) {
     );
     permis.focus();
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
