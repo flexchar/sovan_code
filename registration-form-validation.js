@@ -1,51 +1,51 @@
 function formValidation() {
-  var majorselection = document.registration.subject;
-  var username = document.registration.namestudent;
-  var latin = document.registration.khmername;
-  var imagefile = document.registration.myfile;
-  var umsex = document.registration.msex;
-  var ufsex = document.registration.fsex;
-  var dateOfbirth = document.registration.dob;
-  var placebirth = document.registration.pob;
-  var mynationality = document.registration.nationality;
-  var idNumber = document.registration.id;
-  var userAddress = document.registration.address;
-  var userParent = document.registration.parentname;
-  var usermobile = document.registration.mobile;
-  var uemail = document.registration.email;
-  var userRelationship = document.registration.relationship;
-  var userHighSchool = document.registration.high_school;
-  var parentNum = document.registration.Parentmobile;
-  var s_province = document.registration.province;
-  var permis = document.registration.last;
+  const majorselection = document.registration.subject;
+  const username = document.registration.namestudent;
+  const latin = document.registration.khmername;
+  const imagefile = document.registration.myfile;
+  const umsex = document.registration.msex;
+  const ufsex = document.registration.fsex;
+  const dateOfbirth = document.registration.dob;
+  const placebirth = document.registration.pob;
+  const mynationality = document.registration.nationality;
+  const idNumber = document.registration.id;
+  const userAddress = document.registration.address;
+  const userParent = document.registration.parentname;
+  const usermobile = document.registration.mobile;
+  const uemail = document.registration.email;
+  const userRelationship = document.registration.relationship;
+  const userHighSchool = document.registration.high_school;
+  const parentNum = document.registration.Parentmobile;
+  const s_province = document.registration.province;
+  const permis = document.registration.last;
 
   return (
-    majorselect(majorselection) &&
-    valiadateLifeinfo(lifeinfo) &&
-    allLetter(username) &&
-    validateLatinname(latin) &&
-    validateImagefile(imagefile) &&
-    validsex(umsex, ufsex) &&
+    validateMajorSelect(majorselection) &&
+    valiadateLifeInfo(lifeinfo) &&
+    validateAllLetter(username) &&
+    validateLatinName(latin) &&
+    validateImageFile(imagefile) &&
+    validSex(umsex, ufsex) &&
     validateBirth(dateOfbirth) &&
-    Validateplacebirth(placebirth) &&
+    validatePlaceBirth(placebirth) &&
     validateNationality(mynationality) &&
-    ValidateIDnumber(idNumber) &&
-    ValidateAddress(userAddress) &&
-    phone_validation(usermobile, 8, 15) &&
-    ValidateEmail(uemail) &&
-    validateparentName(userParent) &&
+    validateIdNumber(idNumber) &&
+    validateAddress(userAddress) &&
+    validatePhoneNumber(usermobile, 8, 15) &&
+    validateEmail(uemail) &&
+    validateParentName(userParent) &&
     validatRelationship(userRelationship) &&
     validatParentNum(parentNum, 8, 15) &&
     validateHighSchool(userHighSchool) &&
     validateProvince(s_province) &&
-    validate_permisstion(permis)
+    validatePermisstion(permis)
   );
 
   //formValidate
 }
 
 //******
-function majorselect(majorselection) {
+function validateMajorSelect(majorselection) {
   if (majorselection.value == "Default") {
     alert("សូមជ្រើសរើសមុខជំនាញរបស់អ្នក\n Select your major");
     majorselection.focus();
@@ -54,7 +54,7 @@ function majorselect(majorselection) {
   return true;
 }
 
-function valiadateLifeinfo(lifeinfo) {
+function valiadateLifeInfo(lifeinfo) {
   for (var i = 0; i < lifeinfo.length; i++) {
     if (lifeinfo[i].checked) break;
   }
@@ -66,7 +66,7 @@ function valiadateLifeinfo(lifeinfo) {
   return true;
 }
 
-function allLetter(username) {
+function validateAllLetter(username) {
   //var birthformat = /^[0-9a-zA-Z]+$/;
   //if(placebirth.value.match(birthformat))
   if (username.value == "") {
@@ -77,7 +77,7 @@ function allLetter(username) {
   return true;
 }
 //******
-function validateLatinname(latin) {
+function validateLatinName(latin) {
   var lettersLatin = /^[A-Za-z]+$/;
   if (latin.value.match(lettersLatin)) {
     return true;
@@ -91,7 +91,7 @@ function validateLatinname(latin) {
 }
 
 //******
-function validateImagefile(imagefile) {
+function validateImageFile(imagefile) {
   //var birthformat = /^[0-9a-zA-Z]+$/;
   //if(placebirth.value.match(birthformat))
   if (imagefile.value == "") {
@@ -102,7 +102,7 @@ function validateImagefile(imagefile) {
   return true;
 }
 //******
-function validsex(umsex, ufsex) {
+function validSex(umsex, ufsex) {
   x = 0;
 
   if (umsex.checked) {
@@ -143,7 +143,7 @@ function validateBirth(dateOfbirth) {
   return true;
 }
 
-function Validateplacebirth(placebirth) {
+function validatePlaceBirth(placebirth) {
   //var birthformat = /^[0-9a-zA-Z]+$/;
   //if(placebirth.value.match(birthformat))
   if (placebirth.value == "") {
@@ -167,7 +167,7 @@ function validateNationality(mynationality) {
   return true;
 }
 //*******
-function ValidateIDnumber(idNumber) {
+function validateIdNumber(idNumber) {
   if (idNumber.value == "") {
     alert("សូមបំពេញលេខអត្តសញ្ញាណប័ណ្ណ \n(Please Enter your ID card number)");
     idNumber.focus();
@@ -176,7 +176,7 @@ function ValidateIDnumber(idNumber) {
   return true;
 }
 //*******
-function ValidateAddress(userAddress) {
+function validateAddress(userAddress) {
   if (userAddress.value == "") {
     alert(
       "សូមបំពេញ អាសយដ្ឋានបច្ចុប្បន្នរបស់អ្នក\n(Please Complete your Address)"
@@ -188,7 +188,7 @@ function ValidateAddress(userAddress) {
 }
 
 //******
-function phone_validation(usermobile, mx, my) {
+function validatePhoneNumber(usermobile, mx, my) {
   var uid_len = usermobile.value.length;
   if (uid_len == 0 || uid_len >= my || uid_len < mx) {
     alert(
@@ -204,7 +204,7 @@ function phone_validation(usermobile, mx, my) {
 }
 
 //****
-function ValidateEmail(uemail) {
+function validateEmail(uemail) {
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (uemail.value.match(mailformat)) {
     return true;
@@ -217,7 +217,7 @@ function ValidateEmail(uemail) {
   }
 }
 //*****
-function validateparentName(userParent) {
+function validateParentName(userParent) {
   if (userParent.value == "") {
     alert(
       "សូមបំពេញឈ្មោះឪពុកម្ដាយ ឬអាណាព្យាបាល\n(Please Complete your Parent/Gaurdian's Name!)"
@@ -277,7 +277,7 @@ function validateProvince(s_province) {
   return true;
 }
 
-function validate_permisstion(permis) {
+function validatePermisstion(permis) {
   if (permis.checked == false) {
     alert(
       "សូមធានាអះអាងថាព័ត៌មានដែលបានរៀបរាប់ខាងលើពិតជាត្រឹមត្រូវ និង ពិតប្រាកដ!\n(please click Permission!)"
